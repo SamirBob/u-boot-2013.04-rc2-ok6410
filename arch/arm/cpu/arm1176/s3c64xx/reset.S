@@ -20,9 +20,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  * MA 02111-1307 USA
  */
-
+#ifdef CONFIG_S3C6400
 #include <asm/arch/s3c6400.h>
-
+#else
+#include <asm/arch/s3c6410.h>
+#endif
 .globl reset_cpu
 reset_cpu:
 	ldr	r1, =ELFIN_CLOCK_POWER_BASE

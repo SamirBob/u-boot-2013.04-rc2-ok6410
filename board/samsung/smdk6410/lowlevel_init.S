@@ -34,7 +34,7 @@
 #include <config.h>
 #include <version.h>
 
-#include <asm/arch/s3c6400.h>
+#include <asm/arch/s3c6410.h>
 
 #ifdef CONFIG_SERIAL1
 #define ELFIN_UART_CONSOLE_BASE (ELFIN_UART_BASE + ELFIN_UART0_OFFSET)
@@ -182,7 +182,7 @@ check_syncack:
 
 	/*
 	 * This was unconditional in original Samsung sources, but it doesn't
-	 * seem to make much sense on S3C6400.
+	 * seem to make much sense on S3C6410.
 	 */
 #ifndef CONFIG_S3C6400
 	ldr	r1, [r0, #OTHERS_OFFSET]

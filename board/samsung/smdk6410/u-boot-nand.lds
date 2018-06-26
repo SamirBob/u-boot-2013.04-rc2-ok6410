@@ -48,12 +48,12 @@ SECTIONS
 	.got : { *(.got) }
 
 
-	. = align(4);
+	. = ALIGN(4);
 	.u_boot_list : {
 		KEEP(*(SORT(.u_boot_list*)));
 	}
 
-	. = align(4);
+	. = ALIGN(4);
 	.mmudata : { *(.mmudata) }
 
 	. = ALIGN(4);
